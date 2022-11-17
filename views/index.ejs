@@ -1,6 +1,39 @@
 <%- include('layouts/header.ejs') %>
+<div class="bg-image" style="background-image: url('/img/tamusa.png'); height: 100vh;">
+    <div class="center">
 
-    <h1>Hello index page</h1>
-    <a href="/about" class="button">to about page</a>
+      <form>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="form2Example1" class="form-control" />
+          <label class="form-label" for="form2Example1">User name</label>
+        </div>
+      
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="form2Example2" class="form-control" />
+          <label class="form-label" for="form2Example2">Password</label>
+        </div>
+      
+        <!-- 2 column grid layout for inline styling -->
+        <div class="row mb-4">
+      
+          <div class="col">
+            <!-- Simple link -->
+            <a href="#!">Forgot password?</a>
+          </div>
+        </div>
+      
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+      
+        <!-- Register buttons -->
+        <div class="text-center">
+          <p>Not a member? <a href="#!">Register</a></p>
+        </div>
+      </form>
+
+    </div>
+</div>
 
 <%- include('layouts/footer.ejs') %>

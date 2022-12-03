@@ -1,4 +1,56 @@
 <%- include('layouts/header.ejs') %>
+<div class="bg-image" style="background-image: url('/img/tamusa.png'); height: 100vh;">
+    <div class="center">
+        <form>
+            <div class="text-Center">
+                <h1 style="padding: 7%;"> Register For Account</h1>
+            </div>
 
+            <!--Name Area-->
+            <div class="form-outline mb-4">
+                <input type="fname" id="firstName" class="form-control" />
+                <label class="form-label" for="firstName"> First Name </label>
+            </div>
+            <div class="form-outline mb-4">
+                <input type="lname" id="lastName" class="form-control" />
+                <label class="form-label" for="lastName"> Last Name </label>
+            </div>
+
+            <!--Email Field-->
+            <div class="form-outline mb-4">
+                <input type="email" id="userEmail" class="form-control" />
+                <label class="form-label" for="userEmail"> Email Address </label>
+            </div>
+
+            <!--Username Field-->
+            <div class="form-outline mb-4">
+                <input type="usrname" id="userName" class="form-control" />
+                <label class="form-label" for="usertName"> Username </label>
+            </div>
+
+            <!--Password Field-->
+            <div class="form-outline mb-4">
+                <input type="pass" id="password" class="form-control" />
+                <label class="form-label" for="password"> Password </label>
+            </div>
+
+            <!--Identification Field-->
+            <!-- <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked/>
+                <label class="form-check-label" for="flexRadioDefault2"> Default checked radio </label>
+            </div> -->
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" checked value="option1" />
+                <label class="form-check-label" for="inlineRadio1">Professor</label>
+            </div>
+            
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                <label class="form-check-label" for="inlineRadio2">Student</label>
+            </div>
+        </form>
+    </div>
+</div>
 
 <%- include('layouts/footer.ejs') %>

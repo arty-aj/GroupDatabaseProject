@@ -19,5 +19,9 @@ app.get('/register', (req, res) => {
     res.render('register')
 })
 
+app.get('/registerClub', (req, res) => {
+    res.render('registerClub')
+})
+
 app.listen(port, () => console.info('Listening on port', {port}))
 //localhost:3000

@@ -1,4 +1,42 @@
 <%- include('layouts/header.ejs') %>
+<div class="bg-image" style="background-image: url('/img/tamusa.png'); height: 100vh;">
+    <div class="center">
+      <form>
+        <div class="text-Center">
+          <h1 style="padding: 7%; ">Register Organization</h1>
+        </div>
+        <!-- Club Name Input -->
+        <div class="form-outline mb-4">
+          <input type="orgName" id="OrganizationName" class="form-control" />
+          <label class="form-label" for="OrganizationName">Organization Name</label>
+        </div>
+      
+        <!-- Club Description Input -->
+        <div class="form-outline mb-4">
+          <textarea id="orgDescription" name="OrganizationDescription" placeholder="Organization Description" style="height: 100px; resize: none;"></textarea>
+        </div>
+      
+        <!-- Club Image Input -->
+        <label for="orgImage">Upload an Organization image:</label>
 
+        <input type="file"
+            id="orgImage" name="orgImage"
+            accept="image/png, image/jpeg"/>
+
+        <!-- User Role Input -->
+
+        <select id="userRole" name="userRole">
+            <option value="Pres">President</option>
+            <option value="Sec">Secretary</option>
+            <option value="vPres">Vice President</option>
+            <option value="Mem">Member(Regular)</option>
+        </select>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Register Organization</button>
+      </form>
+
+    </div>
+</div>
 
 <%- include('layouts/footer.ejs') %>

@@ -1,5 +1,5 @@
 <%- include('layouts/header.ejs') %>
-<div class="bg-image" style="background-image: url('/img/tamusa.png'); height: 100vh;">
+<div class="bg-image" style="background-image: url('/img/tamusa.png'); height: 135vh;">
     <div class="center">
       <form>
         <div class="text-Center">
@@ -13,24 +13,26 @@
       
         <!-- Club Description Input -->
         <div class="form-outline mb-4">
-          <textarea id="orgDescription" name="OrganizationDescription" placeholder="Organization Description" style="height: 100px; resize: none;"></textarea>
+          <textarea id="orgDescription" name="OrganizationDescription" placeholder="Organization Description" style="height: 100px; resize: none; width: 100%"></textarea>
         </div>
       
         <!-- Club Image Input -->
-        <label for="orgImage">Upload an Organization image:</label>
+        <div style="padding-top: 10px; padding-bottom: 10px;">
+            <label for="orgImage">Upload an Organization image:</label>
 
-        <input type="file"
-            id="orgImage" name="orgImage"
-            accept="image/png, image/jpeg"/>
+            <input type="file" id="orgImage" name="orgImage" accept="image/png, image/jpeg"/>
+        </div>
 
         <!-- User Role Input -->
-
-        <select id="userRole" name="userRole">
-            <option value="Pres">President</option>
-            <option value="Sec">Secretary</option>
-            <option value="vPres">Vice President</option>
-            <option value="Mem">Member(Regular)</option>
-        </select>
+        <div style="padding-top: 10px; padding-bottom: 20px;">
+            <p>What is your role?</p>
+            <select id="userRole" name="userRole">
+                <option value="Pres">President</option>
+                <option value="vPres">Vice President</option>
+                <option value="Sec">Secretary</option>
+                <option value="Mem">Member(Regular)</option>
+            </select>
+        </div>
 
         <!-- Submit button -->
         <button type="submit" class="btn btn-primary btn-block mb-4">Register Organization</button>

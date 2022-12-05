@@ -14,10 +14,7 @@ var contactSchema = new mongoose.Schema({
   email: {
     type: String,
   },
-  club1: {
-    type: String,
-  },
-  club2: {
+  orgAPart: {
     type: String,
   },
 });

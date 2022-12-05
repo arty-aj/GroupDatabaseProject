@@ -1,17 +1,19 @@
 const mongoose = require("mongoose");
 const router = require("../app");
-
-var nameOfClub = new mongoose.Schema({
-  club: {
+//Organization
+var nameOfOrg = new mongoose.Schema({
+  org: {
     type: String,
   },
-  clubDescript: {
+  OrganizationDescription: {
     type: String,
   },
-  orgImg: {
+  orgImage: {
     type: binData,
   },
-  role: {
+  userRole: {
     type: String,
   },
 });
+
+module.exports = mongoose.model("org", nameOfClub);

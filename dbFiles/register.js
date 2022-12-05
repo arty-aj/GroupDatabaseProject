@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const router = require("../app");
-
-var contactSchema = new mongoose.Schema({
+//Attendee
+var registerSchema = new mongoose.Schema({
   fname: {
     type: String,
   },
@@ -19,4 +19,4 @@ var contactSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Register", contactSchema);
+module.exports = mongoose.model("Register", registerSchema);

@@ -29,11 +29,8 @@ app.get("/orgPage", (req, res) => {
   res.render("orgPage");
 });
 
-
 app.listen(port, () => console.info("Listening on port", { port }));
 //localhost:3000
-
-
 
 /*router.post("/submitInformation", (req, res) => {
   const contact = new contacts({

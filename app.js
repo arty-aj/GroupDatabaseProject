@@ -34,9 +34,10 @@ router.post("/submitInformation", (req, res) => {
   const contact = new contacts({
     fname: req.body.fname,
     lname: req.body.lname,
-    phoneNum: req.body.phoneNum,
     email: req.body.email,
-    commentSection: req.body.commentSection,
+    uName: req.body.uName,
+    pWord: req.body.pWord,
+    orgAPart: req.body.orgAPart,
   });
   contact.collection
     .insertOne(contact)

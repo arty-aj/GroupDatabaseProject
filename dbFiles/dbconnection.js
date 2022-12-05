@@ -1,27 +1,28 @@
-const { MongoClient } = require("mongodb");
+require("dotenv").config();
+const bodyParser = require("body-parser");
+const express = require("express");
+const mongoose = require("mongoose");
+const route = require("../app");
+const path = require("path");
+const app = express();
 
-async function main() {
-  const uri =
-    "mongodb+srv://Ghost07:DBC1a55!@cluster0.wzxnyvs.mongodb.net/?retryWrites=true&w=majority";
+app.set("view engine", "ejs");
+app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(express.static(path.join(__dirname, "")));
+app.use("/", route);
 
-  const client = new MongoClient(uri);
-
-  try {
-    await client.connect();
-    await listDatabases(client);
-  } catch (e) {
-    console.error(e);
-  } finally {
-    await client.close();
-  }
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
 }
-main().catch(console.error);
 
-async function listDatabases(client) {
-  const databasesList = await client.db().admin().listDatabases();
-
-  console.log("Databases:");
-  databasesList.databases.forEach((db) => {
-    console.log(`-${db.name}`);
+mongoose
+  .connect(process.env.IMONG, {
+    useNewURLParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    app.listen(port, () => {
+      console.log("Server is running.");
+    });
   });
-}

@@ -31,11 +31,12 @@ app.get("/orgPage", (req, res) => {
   res.render("orgPage");
 });
 
+
 app.listen(port, () => console.info("Listening on port", { port }));
 //localhost:3000
 
-app.post("/submitInformation", (req, res) => {
-  const newInfo = new newInfo({
+/*router.post("/submitInformation", (req, res) => {
+  const contact = new contacts({
     fname: req.body.fname,
     lname: req.body.lname,
     email: req.body.email,

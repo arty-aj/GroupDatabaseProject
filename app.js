@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const router = express.Router();
+const newInfo = require("./dbFiles/register");
+const mongoose = require("mongoose");
 
 app.use(express.static("public"));
 app.use("/css", express.static(__dirname + "/public/css"));
@@ -32,8 +34,8 @@ app.get("/orgPage", (req, res) => {
 app.listen(port, () => console.info("Listening on port", { port }));
 //localhost:3000
 
-/*router.post("/submitInformation", (req, res) => {
-  const contact = new contacts({
+app.post("/submitInformation", (req, res) => {
+  const newInfo = new newInfo({
     fname: req.body.fname,
     lname: req.body.lname,
     email: req.body.email,
@@ -41,6 +43,7 @@ app.listen(port, () => console.info("Listening on port", { port }));
     pWord: req.body.pWord,
     orgAPart: req.body.orgAPart,
   });
+
   contact.collection
     .insertOne(contact)
     .then((result) => {
@@ -49,4 +52,4 @@ app.listen(port, () => console.info("Listening on port", { port }));
     .catch((err) => console.log(err));
 });
 
-module.exports = router;*/
+module.exports = router;

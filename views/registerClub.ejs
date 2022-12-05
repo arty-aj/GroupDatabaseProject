@@ -1,44 +1,65 @@
 <%- include('layouts/header.ejs') %>
-<div class="bg-image" style="background-image: url('/img/tamusa.png'); height: 135vh;">
-    <div class="center">
-      <form>
-        <div class="text-Center">
-          <h1 style="padding: 7%; ">Register Organization</h1>
-        </div>
-        <!-- Club Name Input -->
-        <div class="form-outline mb-4">
-          <input type="orgName" id="OrganizationName" class="form-control" />
-          <label class="form-label" for="OrganizationName">Organization Name</label>
-        </div>
-      
-        <!-- Club Description Input -->
-        <div class="form-outline mb-4">
-          <textarea id="orgDescription" name="OrganizationDescription" placeholder="Organization Description" style="height: 100px; resize: none; width: 100%"></textarea>
-        </div>
-      
-        <!-- Club Image Input -->
-        <div style="padding-top: 10px; padding-bottom: 10px;">
-            <label for="orgImage">Upload an Organization image:</label>
+<div
+  class="bg-image"
+  style="background-image: url('/img/tamusa.png'); height: 135vh"
+>
+  <div class="center">
+    <form>
+      <div class="text-Center">
+        <h1 style="padding: 7%">Register Organization</h1>
+      </div>
+      <!-- Club Name Input -->
+      <div class="form-outline mb-4">
+        <input
+          type="orgName"
+          id="OrganizationName"
+          class="form-control"
+          name="org"
+        />
+        <label class="form-label" for="OrganizationName"
+          >Organization Name</label
+        >
+      </div>
 
-            <input type="file" id="orgImage" name="orgImage" accept="image/png, image/jpeg"/>
-        </div>
+      <!-- Club Description Input -->
+      <div class="form-outline mb-4">
+        <textarea
+          id="orgDescription"
+          name="OrganizationDescription"
+          placeholder="Organization Description"
+          style="height: 100px; resize: none; width: 100%"
+        ></textarea>
+      </div>
 
-        <!-- User Role Input -->
-        <div style="padding-top: 10px; padding-bottom: 20px;">
-            <p>What is your role?</p>
-            <select id="userRole" name="userRole">
-                <option value="Pres">President</option>
-                <option value="vPres">Vice President</option>
-                <option value="Sec">Secretary</option>
-                <option value="Mem">Member(Regular)</option>
-            </select>
-        </div>
+      <!-- Club Image Input -->
+      <div style="padding-top: 10px; padding-bottom: 10px">
+        <label for="orgImage">Upload an Organization image:</label>
 
-        <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-4">Register Organization</button>
-      </form>
+        <input
+          type="file"
+          id="orgImage"
+          name="orgImage"
+          accept="image/png, image/jpeg"
+        />
+      </div>
 
-    </div>
+      <!-- User Role Input -->
+      <div style="padding-top: 10px; padding-bottom: 20px">
+        <p>What is your role?</p>
+        <select id="userRole" name="userRole">
+          <option value="Pres">President</option>
+          <option value="vPres">Vice President</option>
+          <option value="Sec">Secretary</option>
+          <option value="Mem">Member(Regular)</option>
+        </select>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-4">
+        Register Organization
+      </button>
+    </form>
+  </div>
 </div>
 
 <%- include('layouts/footer.ejs') %>

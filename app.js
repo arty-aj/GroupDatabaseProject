@@ -35,7 +35,7 @@ app.listen(port, () => console.info("Listening on port", { port }));
 //localhost:3000
 
 app.post("/submitInformation", (req, res) => {
-  const contact = new contacts({
+  newInfo = new newInfo({
     fname: req.body.fname,
     lname: req.body.lname,
     email: req.body.email,
@@ -44,10 +44,10 @@ app.post("/submitInformation", (req, res) => {
     orgAPart: req.body.orgAPart,
   });
 
-  contact.collection
+  newInfo.collection
     .insertOne(contact)
     .then((result) => {
-      res.render("contact");
+      res.render("newInfo");
     })
     .catch((err) => console.log(err));
 });

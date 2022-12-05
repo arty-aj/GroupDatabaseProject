@@ -23,5 +23,9 @@ app.get('/registerClub', (req, res) => {
     res.render('registerClub')
 })
 
+app.get('/orgPage', (req, res) => {
+    res.render('orgPage')
+})
+
 app.listen(port, () => console.info('Listening on port', {port}))
 //localhost:3000

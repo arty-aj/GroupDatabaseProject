@@ -8,10 +8,13 @@ var registerSchema = new mongoose.Schema({
   lname: {
     type: String,
   },
-  phoneNum: {
+  email: {
     type: String,
   },
-  email: {
+  uName: {
+    type: String,
+  },
+  pWord: {
     type: String,
   },
   orgAPart: {

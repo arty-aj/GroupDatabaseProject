@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const port = 3000;
+const router = express.Router();
+
 app.use(express.static("public"));
 app.use("/css", express.static(__dirname + "/public/css"));
 app.use("/img", express.static(__dirname + "/public/img"));
@@ -30,7 +32,7 @@ app.get("/orgPage", (req, res) => {
 app.listen(port, () => console.info("Listening on port", { port }));
 //localhost:3000
 
-router.post("/submitInformation", (req, res) => {
+/*router.post("/submitInformation", (req, res) => {
   const contact = new contacts({
     fname: req.body.fname,
     lname: req.body.lname,
@@ -47,4 +49,4 @@ router.post("/submitInformation", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-module.exports = router;
+module.exports = router;*/

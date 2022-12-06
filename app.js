@@ -45,7 +45,7 @@ app.post("/submitInformation", (req, res) => {
   });
 
   newInfo.collection
-    .insertOne(contact)
+    .insertOne(newInfo)
     .then((result) => {
       res.render("newInfo");
     })

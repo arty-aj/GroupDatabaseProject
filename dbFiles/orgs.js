@@ -9,11 +9,11 @@ var nameOfOrg = new mongoose.Schema({
     type: String,
   },
   orgImage: {
-    type: binData,
+    type: String,
   },
   userRole: {
     type: String,
   },
 });
 
-module.exports = mongoose.model("org", nameOfClub);
+module.exports = mongoose.model("org", nameOfOrg);

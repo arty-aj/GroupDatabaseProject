@@ -3,6 +3,7 @@ const app = express();
 const port = 3000;
 const router = express.Router();
 const newInfo = require("./dbFiles/register");
+const reg = require("./dbFiles/orgs");
 const mongoose = require("mongoose");
 
 app.use(express.static("public"));
@@ -52,4 +53,19 @@ app.post("/submitInformation", (req, res) => {
     .catch((err) => console.log(err));
 });
 
+app.post("/registerAttendee", (req, res) => {
+  reg = new reg({
+    org: req.body.org,
+    OrganizationDescription: req.body.OrganizationDescription,
+    orgImage: req.body.orgImage,
+    userRole: req.body.userRole,
+  });
+
+  reg.collection
+    .insertOne(reg)
+    .then((result) => {
+      res.render("newInfo");
+    })
+    .catch((err) => console.log(err));
+});
 module.exports = router;
